@@ -20,7 +20,7 @@ export default function UniversityLookup() {
 
   useEffect(() => {
     const countryListSource =
-      "https://countriesnow.space/api/v0.1/countries/info?returns=none";
+      "https://countriesnow.space/api/v0.1/countries/info?returns=none/";
 
     axios
       .get(countryListSource)
@@ -34,7 +34,7 @@ export default function UniversityLookup() {
 
   useEffect(() => {
     if (country !== "") {
-      const getUniSource = `http://universities.hipolabs.com/search?country=${country}`;
+      const getUniSource = `http://universities.hipolabs.com/search?country=${country}/`;
 
       axios
         .get(getUniSource)
